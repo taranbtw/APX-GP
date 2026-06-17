@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex">
+      <div className="min-h-screen bg-[#101010] text-white flex">
         <Sidebar />
 
         <main className="flex-1 p-8">
