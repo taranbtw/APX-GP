@@ -131,7 +131,7 @@ export default function Dashboard() {
             <div className="flex justify-between">
               <span className="text-zinc-300">Telemetry</span>
 
-              <span className="text-yellow-400">COMING SOON</span>
+              <span className="text-green-400">ACTIVE</span>
             </div>
 
             <div className="flex justify-between">
