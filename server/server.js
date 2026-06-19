@@ -23,7 +23,11 @@ const io = new Server(server, {
   },
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://apx-gp.vercel.app/"],
+  }),
+);
 app.use(express.json());
 
 let cachedDrivers = null;
@@ -127,8 +131,6 @@ app.get("/api/telemetry/:driver", async (req, res) => {
     });
   }
 });
-
-
 
 async function broadcastLeaderboard() {
   try {
