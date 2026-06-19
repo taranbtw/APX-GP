@@ -19,15 +19,19 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://apx-gp.vercel.app"],
+    methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://apx-gp.vercel.app/"],
+    origin: ["http://localhost:5173", "https://apx-gp.vercel.app"],
+    credentials: true,
   }),
 );
+
 app.use(express.json());
 
 let cachedDrivers = null;
